@@ -19,22 +19,15 @@ class User {
 
   verifyPassword = (password) => this.password === password
 
-  static add = (user) => {
-    this.#list.push(user)
-  }
+  static add = (user) => this.#list.push(user)
 
-  static getList = () => {
-    this.#list
-  }
+  static getList = () => this.#list
 
-  static getById = (id) => {
-    this.#list.findIndex((user) => user.id === id)
-  }
+  static getById = (id) =>
+    this.#list.find((user) => user.id === id)
 
   static deleteById = (id) => {
-    const index = this.#list.findIndex(
-      (user) => user.id === id,
-    )
+    const index = this.#list.find((user) => user.id === id)
     if (index !== -1) {
       this.#list.splice(index, 1)
       return true
@@ -77,7 +70,7 @@ router.get('/', function (req, res) {
     data: {
       users: {
         list,
-        isEmpty: list.lenght === 0,
+        isEmpty: list.length === 0,
       },
     },
   })
