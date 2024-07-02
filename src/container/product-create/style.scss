@@ -68,7 +68,7 @@ section {
         border-radius: 10px;
         background-color: #242EFF;
         color: white;
-        width: 100%;
+        
     }
 }
 
@@ -79,15 +79,20 @@ section {
         display: grid;
         padding: s.space(4);
         background-color: rgb(247, 245, 245);
-        width: 700px;
         border-radius: 10px;
+        width: 700px;
     }
 
     &__form__title {
         font-size: 16px;
-        font-weight: bold;
-        
-    
+        font-weight: bold; 
+    }
+
+    &__form__label {
+        font-size: 13px;
+        padding-left: s.space(2);
+        color: gray;
+        width: 250px;
     }
 
     &__form__button {
@@ -102,10 +107,6 @@ section {
         justify-self: end;
         text-decoration: none;
     }
-    
-    &__form__info {
-        font-size: 13px;
-        color: gray;
-        width: 250px;
-    }
 }
+
+
