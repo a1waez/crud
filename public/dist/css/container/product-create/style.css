@@ -1,16 +1,12 @@
-
 section {
   padding: 12px;
 }
-
-
 
 .form {
   display: flex;
   flex-direction: column;
   padding: 16px;
   gap: 32px;
-
   background-color: rgb(247, 245, 245);
   width: 700px;
   border-radius: 10px;
@@ -25,26 +21,15 @@ section {
   font-size: 18px;
   font-weight: bold;
   padding: 8px;
-
-}
-.form__title {
-  font-size: 20px;
-  font-weight: bold;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #ddd;
-
 }
 .form__content {
   display: grid;
   gap: 24px;
-
   box-shadow: inset;
 }
 .form__field2 {
   display: flex;
   flex-direction: row;
-
-
 }
 .form__field {
   display: flex;
@@ -52,7 +37,6 @@ section {
   gap: 8px;
 }
 .form__label {
-
   font-size: 13px;
   padding-left: 8px;
   color: gray;
@@ -68,7 +52,6 @@ section {
   border-radius: 10px;
   background-color: #242EFF;
   color: white;
-  width: 100%;
 }
 
 .alert {
@@ -78,12 +61,18 @@ section {
   display: grid;
   padding: 16px;
   background-color: rgb(247, 245, 245);
-  width: 700px;
   border-radius: 10px;
+  width: 700px;
 }
 .alert__form__title {
   font-size: 16px;
   font-weight: bold;
+}
+.alert__form__label {
+  font-size: 13px;
+  padding-left: 8px;
+  color: gray;
+  width: 250px;
 }
 .alert__form__button {
   display: flex;
@@ -96,35 +85,6 @@ section {
   width: 250px;
   justify-self: end;
   text-decoration: none;
-}
-.alert__form__info {
-  font-size: 13px;
-  color: gray;
-  width: 250px;
-
-  font-size: 14px;
-}
-.form__input {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-.form__button {
-  border: 1px solid #ddd;
-  padding: 8px;
-  border-radius: 20px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.user-list li {
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-
 }
 
 /*# sourceMappingURL=style.css.map */
