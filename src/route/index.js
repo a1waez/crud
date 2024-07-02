@@ -137,6 +137,24 @@ router.get('/', function (req, res) {
 // router.get Створює нам один ентпоїнт
 
 // ↙️ тут вводимо шлях (PATH) до сторінки
+router.get('/product-create', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  // ↙️ cюди вводимо назву файлу з сontainer
+  res.render('product-create', {
+    // вказуємо назву папки контейнера, в якій знаходяться наші стилі
+    style: 'product-create',
+  })
+  // ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+// ↙️ тут вводимо шлях (PATH) до сторінки
 router.post('/product-create', function (req, res) {
   // res.render генерує нам HTML сторінку
   const { name, prise, description } = req.body
