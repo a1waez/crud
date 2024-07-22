@@ -76,24 +76,34 @@ section {
     padding: s.space(3);
     
     &__form {
-        display: grid;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         padding: s.space(4);
         background-color: rgb(247, 245, 245);
         border-radius: 10px;
         width: 700px;
+    
     }
 
+    &__form__text {
+        display: flex;
+        flex-direction: column; 
+        gap: s.space(2);
+    }
+
+    
     &__form__title {
         font-size: 16px;
         font-weight: bold; 
     }
-
+        
     &__form__info {
         font-size: 13px;
         color: gray;
         width: 250px;
     }
-
+        
     &__form__button {
         display: flex;
         justify-content: center;
@@ -107,3 +117,4 @@ section {
         text-decoration: none;
     }
 }
+

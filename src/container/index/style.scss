@@ -13,13 +13,10 @@ section {
     background-color: rgb(247, 245, 245);
     width: 700px;
     border-radius: 10px;
-    
-
-
 
 
     &__title {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: bold;
         padding: s.space(4);  
         color: #242EFF; 
@@ -29,7 +26,8 @@ section {
         font-size: 18px;
         font-weight: bold;
         padding: s.space(2); 
-        
+    }
+} 
 
 .form {
     display: flex;
@@ -37,35 +35,31 @@ section {
     padding: s.space(4);
     gap: s.space(8);
 
-    &__title {
-        font-size: 20px;
-        font-weight: bold;
-        padding-bottom: s.space(1);
-        border-bottom: 1px solid s.color('light');
-
-    }
+    
 
     &__content {
-        display: grid;
+        display: flex;
         gap: s.space(6);
-
-        box-shadow: inset;
+        flex-direction: column;
+       
     }
     
     &__field2 {
         display: flex;
         flex-direction: row;
-        
+        gap: s.space(2);
+    }
 
+    &__field2__all {
+        display: flex;
+        flex-direction: column;
+        gap: s.space(2);
+        width: 334px;
     }
 
     &__field {
         display: flex;
-
         flex-direction:column;
-
-        flex-direction: column;
-
         gap: s.space(2);
     }
 
@@ -101,11 +95,20 @@ section {
     padding: s.space(3);
     
     &__form {
-        display: grid;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         padding: s.space(4);
         background-color: rgb(247, 245, 245);
-        width: 700px;
         border-radius: 10px;
+        width: 700px;
+    
+    }
+
+    &__form__text {
+        display: flex;
+        flex-direction: column; 
+        gap: s.space(2);
     }
 
     &__form__title {
@@ -143,17 +146,5 @@ section {
 
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    gap: s.space(10);
-}
 
-.user-list {
-    li {
-        padding-right: 15px;
-        padding-top: 5px;
-        padding-bottom: 5px;
 
-    }
-}

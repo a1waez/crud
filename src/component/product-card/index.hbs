@@ -1,7 +1,26 @@
-<div>
-    {{name}}
-    {{description}}
-    {{id}}
-    {{price}}
-    <a href="/product-edit?id={{id}}">Редагувати</a>
-</div>
+<ul>
+
+    <li>
+
+        <div>
+
+            {{#if isEmpty}}
+            <p>List is empty</p>
+            {{/if}}
+
+
+            <div class="product__card">
+
+                <h2 class="product__card__name">{{this.name}} </h2>
+                <p class="product__card__description">{{this.description}} </p>
+                <p class="product__card__id">ID: {{this.id}}</p>
+                <div class="price__edit">
+                    <p class="product__card__price">{{this.price}}</p>
+                    <a href="/product-edit?id={{id}}" class="product__card__edit">Редагувати</a>
+                </div>
+            </div>
+
+        </div>
+
+    </li>
+</ul>

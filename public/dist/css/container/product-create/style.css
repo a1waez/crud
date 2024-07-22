@@ -42,12 +42,12 @@ section {
   color: gray;
 }
 .form__input {
-  border: 1px solid;
+  border: 1px solid #ddd;
   padding: 8px;
   border-radius: 10px;
 }
 .form__button {
-  border: 1px solid;
+  border: 1px solid #ddd;
   padding: 8px;
   border-radius: 10px;
   background-color: #242EFF;
@@ -77,7 +77,7 @@ section {
 .alert__form__button {
   display: flex;
   justify-content: center;
-  border: 1px solid;
+  border: 1px solid #ddd;
   padding: 8px;
   border-radius: 10px;
   background-color: #242EFF;
