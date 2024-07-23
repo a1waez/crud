@@ -37,10 +37,25 @@ class Product {
     }
   }
 
+  static update = (
+    product,
+    { name, price, description },
+  ) => {
+    if (name) {
+      product.name = name
+    }
+    if (price) {
+      product.price = price
+    }
+    if (description) {
+      product.description = description
+    }
+  }
+
   static updateById = (id, data) => {
     const product = this.getById(id)
     if (product) {
-      this.update(price, description, data)
+      this.update(product, data)
       return true
     } else {
       return false
@@ -101,8 +116,8 @@ router.post('/product-create', function (req, res) {
   const product = new Product(name, price, description)
   Product.add(product)
   // console.log(Product.getList())
-  res.render('alert', {
-    style: 'alert',
+  res.render('alert-create', {
+    style: 'alert-create',
     info: 'The product has been created.',
     id: product.id,
     date: product.createDate,
@@ -152,11 +167,12 @@ router.get('/product-edit', function (req, res) {
 router.post('/product-edit', function (req, res) {
   // res.render генерує нам HTML сторінку
   const { name, price, description } = req.body
-  Product.updateById(name, price, description)
+  const id = Number(req.body.id)
+  Product.updateById(id, { name, price, description })
 
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('alert', {
-    style: 'alert',
+  res.render('alert-update', {
+    style: 'alert-update',
     info: 'The product has been update.',
   })
   // ↑↑ сюди вводимо JSON дані
@@ -169,12 +185,12 @@ router.post('/product-edit', function (req, res) {
 // ↙️ тут вводимо шлях (PATH) до сторінки
 router.get('/product-delete', function (req, res) {
   // res.render генерує нам HTML сторінку
-  const { id } = req.query
+  const id = Number(req.query.id)
   Product.deleteById(id)
 
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('alert', {
-    style: 'alert',
+  res.render('alert-delete', {
+    style: 'alert-delete',
     info: 'The product has been delete.',
   })
   // ↑↑ сюди вводимо JSON дані

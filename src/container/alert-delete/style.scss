@@ -18,7 +18,7 @@ section {
 
 
     &__title {
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
         padding: s.space(4);  
         color: #242EFF; 
@@ -68,28 +68,42 @@ section {
         border-radius: 10px;
         background-color: #242EFF;
         color: white;
-        width: 100%;
+        
     }
-
 }
+
 .alert {
     padding: s.space(3);
     
     &__form {
-        display: grid;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         padding: s.space(4);
         background-color: rgb(247, 245, 245);
-        width: 700px;
         border-radius: 10px;
-    }
-
-    &__form__title {
-        font-size: 16px;
-        font-weight: bold;
-        
+        width: 700px;
     
     }
 
+    &__form__text {
+        display: flex;
+        flex-direction: column; 
+        gap: s.space(2);
+    }
+
+    
+    &__form__title {
+        font-size: 16px;
+        font-weight: bold; 
+    }
+        
+    &__form__info {
+        font-size: 13px;
+        color: gray;
+        width: 250px;
+    }
+        
     &__form__button {
         display: flex;
         justify-content: center;
@@ -102,83 +116,5 @@ section {
         justify-self: end;
         text-decoration: none;
     }
-    
-    &__form__info {
-        font-size: 13px;
-        color: gray;
-        width: 250px;
-    }
-    
 }
-
-
-    
-
-.product__list{
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    
-}
-
-.product__card {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    height: fit-content;
-    gap: s.space(3);
-    padding: s.space(4);
-    border-radius: 10px;
-    background-color: rgb(247, 245, 245);
-        
-    
-
-    
-    .product__card__name {
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .product__card__description {
-        font-size: 15px;
-    }
-
-    .product__card__id {
-        font-size: 13px;
-        color: gray;
-    }
-
-    .price__edit {
-        display: flex;
-        justify-content: space-between;
-
-
-        .product__card__price {
-            font-size: 16px;
-            font-weight: bold;
-            width: fit-content;
-        }
-           
-            
-        .product__card__edit {
-            text-decoration: none;
-            width: fit-content;
-        }
-        
-    }
-
-        
-}
-
-
-
-
-
-
-
- 
-
-    
-
-
 

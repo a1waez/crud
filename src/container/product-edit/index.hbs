@@ -4,22 +4,21 @@
     <form method="POST" action="/product-edit">
 
 
-        <div class="form">
+        <div class="form__content">
             <h2 class="form__field__title">Інформація про товар</h2>
-            <div class="form__content">
+            <div class="form">
                 <div class="form__field2">
                     <div class="form__field2__all">
                         <label for="name" class="form__label">Назва товару</label>
                         <input type="text" value="{{name}}" name="name" class="form__input">
                     </div>
-
                     <div class="form__field2__all">
                         <label for="price" class="form__label">Ціна</label>
                         <input type="text" value="{{price}}" name="price" class="form__input">
                     </div>
                     <div class="form__field2__all">
                         <label for="ID" class="form__label">ID</label>
-                        <input type="text" value="{{id}}" name="ID" class="form__input">
+                        <input type="text" value="{{id}}" name="id" class="form__input">
                     </div>
                 </div>
                 <div class="form__field">
@@ -27,7 +26,7 @@
                     <input type="text" value="{{description}}" name="description" class="form__input">
                 </div>
                 <div class="form__button__all">
-                    <button method="POST" action="/product-edit" class="form__button form__button__success">Зберегти
+                    <button class="form__button form__button__success">Зберегти
                         оновлення</button>
                     <a href="/product-delete?id={{id}}" class="form__button form__button__delete">Видалити
                         товар</a>
