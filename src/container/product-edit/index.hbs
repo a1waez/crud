@@ -27,10 +27,10 @@
                     <input type="text" value="{{description}}" name="description" class="form__input">
                 </div>
                 <div class="form__button__all">
-                    <button href="/product-edit?id={{id}}" class="form__button form__button__success">Зберегти
+                    <button method="POST" action="/product-edit" class="form__button form__button__success">Зберегти
                         оновлення</button>
-                    <button href="/product-edit?id={{id}}" class="form__button form__button__delete">Видалити
-                        товар</button>
+                    <a href="/product-delete?id={{id}}" class="form__button form__button__delete">Видалити
+                        товар</a>
                 </div>
             </div>
         </div>

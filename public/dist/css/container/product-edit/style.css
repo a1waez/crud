@@ -74,12 +74,15 @@ section {
   width: 100%;
 }
 .form__button__delete {
+  display: flex;
+  justify-content: center;
   border: 1px solid #ddd;
   padding: 8px;
   border-radius: 7px;
   background-color: red;
   color: white;
   width: 100%;
+  text-decoration: none;
 }
 
 .alert {

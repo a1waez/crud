@@ -13,7 +13,7 @@ class Product {
     this.name = name
     this.price = price
     this.description = description
-    this.id = Math.random()
+    this.id = Math.floor(Math.random() * 90000) + 10000
   }
 
   static add = (product) => {
@@ -22,9 +22,8 @@ class Product {
 
   static getList = () => this.#list
 
-  static getById = (id) => {
-    this.#list.findIndex((product) => product.id === id)
-  }
+  static getById = (id) =>
+    this.#list.find((product) => product.id === id)
 
   static deleteById = (id) => {
     const index = this.#list.findIndex(
@@ -135,8 +134,8 @@ router.get('/product-list', function (req, res) {
 
 router.get('/product-edit', function (req, res) {
   // res.render генерує нам HTML сторінку
-  const { id } = req.query
-  let product = Product.getById(Number(id))
+  const id = Number(req.query.id)
+  const product = Product.getById(id)
 
   // ↙️ cюди вводимо назву файлу з сontainer
   res.render('product-edit', {
@@ -156,10 +155,9 @@ router.post('/product-edit', function (req, res) {
   Product.updateById(name, price, description)
 
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('product-edit', {
-    // вказуємо назву папки контейнера, в якій знаходяться наші стилі
-    style: 'product-edit',
-    info: 'Product edit',
+  res.render('alert', {
+    style: 'alert',
+    info: 'The product has been update.',
   })
   // ↑↑ сюди вводимо JSON дані
 })
@@ -175,10 +173,9 @@ router.get('/product-delete', function (req, res) {
   Product.deleteById(id)
 
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('product-list', {
-    // вказуємо назву папки контейнера, в якій знаходяться наші стилі
-    style: 'product-list',
-    info: 'Product list',
+  res.render('alert', {
+    style: 'alert',
+    info: 'The product has been delete.',
   })
   // ↑↑ сюди вводимо JSON дані
 })

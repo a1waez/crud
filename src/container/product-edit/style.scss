@@ -92,12 +92,15 @@ section {
     }
 
     &__button__delete {
+        display: flex;
+        justify-content: center;
         border: 1px solid s.color('light');
         padding: s.space(2);
         border-radius: 7px;
         background-color: red;
         color: white;
         width: 100%;
+        text-decoration: none;
     }
 
 }
