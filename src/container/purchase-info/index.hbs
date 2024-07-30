@@ -1,0 +1,85 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<main class="main">
+  {{#with data}}
+  <form method="POST" action="/purchase-edit?id={{id}}" class="form-card">
+    {{> heading title="Інформація про замовлення"}}
+
+    <div class="purchase-info">
+      <p class="purchase-info__title">ID:</p>
+      <span class="purchase-info__data">{{id}}span</span>
+    </div>
+
+    {{>divider}}
+    <div class="purchase-info4">
+      <div class="purchase-info">
+        <p class="purchase-info__title">Ім'я:</p>
+        <span class="purchase-info__data">{{firstname}}span</span>
+      </div>
+
+      <div class="purchase-info">
+        <p class="purchase-info__title">Прізвище:</p>
+        <span class="purchase-info__data">{{lastname}}span</span>
+      </div>
+
+      <div class="purchase-info">
+        <p class="purchase-info__title">Телефон:</p>
+        <span class="purchase-info__data">{{phone}}span</span>
+      </div>
+
+      <div class="purchase-info">
+        <p class="purchase-info__title">Єлектронна пошта:</p>
+        <span class="purchase-info__data">{{email}}span</span>
+      </div>
+    </div>
+
+
+    {{>divider}}
+
+    <div class="purchase-info4">
+      <div class="purchase-info">
+        <p class="purchase-info__title">Назва товару:</p>
+        <span class="purchase-info__data">{{text}}span</span>
+      </div>
+      <div class="purchase-info">
+        <p class="purchase-info__title">Коментар:</p>
+        <span class="purchase-info__data">{{comment}}span</span>
+      </div>
+    </div>
+
+    {{>divider}}
+
+    <div class="purchase-info4">
+      <div class="purchase-info">
+        <p class="purchase-info__title">Вартість товарів:</p>
+        <span class="purchase-info__data">{{totalPrice}}span</span>
+      </div>
+      <div class="purchase-info">
+        <p class="purchase-info__title">Сума до сплати:</p>
+        <span class="purchase-info__data">{{productPrice}}span</span>
+      </div>
+      <div class="purchase-info">
+        <p class="purchase-info__title">Вартість доставки:</p>
+        <span class="purchase-info__data">{{deliveryPrice}}span</span>
+      </div>
+      <div class="purchase-info">
+        <p class="purchase-info__title">Нараховані бонуси:</p>
+        <span class="purchase-info__data">{{amount}}span</span>
+      </div>
+    </div>
+
+    {{>button text="Змінити дані"}}
+
+  </form>
+  {{/with}}
+</main>
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+  Адже наш layout/default.hbs має вже структуру HTML
+  }}

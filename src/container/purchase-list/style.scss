@@ -1,0 +1,133 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/list/style.scss' as list;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: s.space(10);
+    padding: s.space(10);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(4);
+    align-items: flex-start;
+}
+
+
+.product-info__image {
+    max-height: 300px;
+    width: 100%;
+}
+
+.product-info__title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-info__subtitle {
+    font-size: 16px;
+    color: s.color(gray);
+}
+
+.product-info__category {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 1px solid transparent;
+}
+
+.product-info__category--1 {
+    border-color: s.color(main);
+    color: s.color(main);
+}
+
+.product-info__category--2 {
+    border-color: s.color(success);
+    color: s.color(success);
+}
+
+.product-info__button {
+    background-color: s.color(main);
+    color: s.color(superlight);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+
+.purchase-create__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: s.color(main);
+    color: s.color(superlight);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    width: 100%;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: s.space(5);
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(5);
+    padding: s.space(5);
+    border: 1px solid s.color(gray);
+    border-radius: 20px;
+    width: 700px;
+}
+
+.cart__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.cart__item__text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart__item__price {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.form-card__total {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+

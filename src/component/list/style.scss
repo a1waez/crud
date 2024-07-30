@@ -1,0 +1,21 @@
+@use '../../lib/service.scss' as s;
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.list-id {
+    display: flex;
+    align-self: center;
+    font-size: 16px;
+    color: s.color(grey);
+}
+
+.list-info{
+    display: flex;
+    flex-direction: column;
+    color: s.color(grey);
+}

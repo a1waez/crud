@@ -1,0 +1,121 @@
+@use '../../lib/service.scss' as s;
+
+section {
+    padding: s.space(3);
+}
+
+.form {
+    display: flex;
+    flex-direction:column ;
+    padding: s.space(4);
+    gap: s.space(8);
+    background-color: rgb(247, 245, 245);
+    width: 700px;
+    border-radius: 10px;
+    
+
+
+
+
+    &__title {
+        font-size: 30px;
+        font-weight: bold;
+        padding: s.space(4);  
+        color: #242EFF; 
+    }
+
+    &__field__title {
+        font-size: 18px;
+        font-weight: bold;
+        padding: s.space(2); 
+        
+    }
+
+    &__content {
+        display: grid;
+        gap: s.space(6);
+        box-shadow: inset;
+    }
+    
+    &__field2 {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    &__field {
+        display: flex;
+        flex-direction:column;
+        gap: s.space(2);
+    }
+
+    &__label {
+        font-size: 13px;
+        padding-left: s.space(2);
+        color: gray;
+    }
+
+    &__input {
+        border: 1px solid s.color('light');
+        padding: s.space(2);
+        border-radius: 10px;
+
+    }
+
+    &__button{
+        border: 1px solid s.color('light');
+        padding: s.space(2);
+        border-radius: 10px;
+        background-color: #242EFF;
+        color: white;
+        
+    }
+}
+
+.alert {
+    display: flex;
+    justify-content: center;
+    padding: s.space(3);
+    
+    &__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: s.space(4);
+        background-color: rgb(247, 245, 245);
+        border-radius: 10px;
+        width: 700px;
+    
+    }
+
+    &__form__text {
+        display: flex;
+        flex-direction: column; 
+        gap: s.space(2);
+    }
+
+    
+    &__form__title {
+        font-size: 16px;
+        font-weight: bold; 
+    }
+        
+    &__form__info {
+        font-size: 13px;
+        color: gray;
+        width: 250px;
+    }
+        
+    &__form__button {
+        display: flex;
+        justify-content: center;
+        border: 1px solid s.color('light');
+        padding: s.space(2);
+        border-radius: 10px;
+        background-color:#242EFF;
+        color: white;
+        width: 250px;
+        justify-self: end;
+        text-decoration: none;
+    }
+}
