@@ -8,11 +8,11 @@ section {
   padding: 16px;
   gap: 32px;
   background-color: rgb(247, 245, 245);
-  width: 700px;
+  width: 800px;
   border-radius: 10px;
 }
 .form__title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   padding: 16px;
   color: #242EFF;
@@ -22,25 +22,24 @@ section {
   font-weight: bold;
   padding: 8px;
 }
-
-.form {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  gap: 32px;
-}
 .form__content {
-  display: grid;
+  display: flex;
   gap: 24px;
-  box-shadow: inset;
+  flex-direction: column;
 }
 .form__field2 {
   display: flex;
   flex-direction: row;
+  gap: 8px;
+}
+.form__field2__all {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 334px;
 }
 .form__field {
   display: flex;
-  flex-direction: column;
   flex-direction: column;
   gap: 8px;
 }
@@ -48,20 +47,42 @@ section {
   font-size: 13px;
   padding-left: 8px;
   color: gray;
-  font-size: 14px;
 }
 .form__input {
   border: 1px solid #ddd;
   padding: 8px;
   border-radius: 10px;
 }
+.form__button__all {
+  display: flex;
+  gap: 8px;
+}
 .form__button {
   border: 1px solid #ddd;
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 7px;
   background-color: #242EFF;
   color: white;
   width: 100%;
+}
+.form__button__success {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 7px;
+  background-color: #242EFF;
+  color: white;
+  width: 100%;
+}
+.form__button__delete {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 7px;
+  background-color: red;
+  color: white;
+  width: 100%;
+  text-decoration: none;
 }
 
 .alert {
@@ -95,11 +116,6 @@ section {
   color: gray;
   width: 250px;
 }
-.alert__button {
-  border: 1px solid #ddd;
-  padding: 8px;
-  border-radius: 20px;
-}
 
 .product__list {
   display: flex;
@@ -108,7 +124,7 @@ section {
   background-color: rgb(247, 245, 245);
   border-radius: 10px;
   gap: 12px;
-  max-width: 250px;
+  width: fit-content;
   max-height: 150px;
 }
 .product__list .product__card {

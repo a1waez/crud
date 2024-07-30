@@ -1,22 +1,18 @@
-
 section {
   padding: 12px;
 }
-
-
 
 .form {
   display: flex;
   flex-direction: column;
   padding: 16px;
   gap: 32px;
-
   background-color: rgb(247, 245, 245);
   width: 700px;
   border-radius: 10px;
 }
 .form__title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   padding: 16px;
   color: #242EFF;
@@ -25,26 +21,29 @@ section {
   font-size: 18px;
   font-weight: bold;
   padding: 8px;
-
 }
-.form__title {
-  font-size: 20px;
-  font-weight: bold;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #ddd;
 
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 32px;
 }
 .form__content {
-  display: grid;
+  display: flex;
   gap: 24px;
-
-  box-shadow: inset;
+  flex-direction: column;
 }
 .form__field2 {
   display: flex;
   flex-direction: row;
-
-
+  gap: 8px;
+}
+.form__field2__all {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 334px;
 }
 .form__field {
   display: flex;
@@ -52,18 +51,18 @@ section {
   gap: 8px;
 }
 .form__label {
-
   font-size: 13px;
   padding-left: 8px;
   color: gray;
+  font-size: 14px;
 }
 .form__input {
-  border: 1px solid;
+  border: 1px solid #ddd;
   padding: 8px;
   border-radius: 10px;
 }
 .form__button {
-  border: 1px solid;
+  border: 1px solid #ddd;
   padding: 8px;
   border-radius: 10px;
   background-color: #242EFF;
@@ -75,11 +74,18 @@ section {
   padding: 12px;
 }
 .alert__form {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 16px;
   background-color: rgb(247, 245, 245);
-  width: 700px;
   border-radius: 10px;
+  width: 700px;
+}
+.alert__form__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .alert__form__title {
   font-size: 16px;
@@ -88,7 +94,7 @@ section {
 .alert__form__button {
   display: flex;
   justify-content: center;
-  border: 1px solid;
+  border: 1px solid #ddd;
   padding: 8px;
   border-radius: 10px;
   background-color: #242EFF;
@@ -101,30 +107,11 @@ section {
   font-size: 13px;
   color: gray;
   width: 250px;
-
-  font-size: 14px;
 }
-.form__input {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-.form__button {
+.alert__button {
   border: 1px solid #ddd;
   padding: 8px;
   border-radius: 20px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.user-list li {
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-
 }
 
 /*# sourceMappingURL=style.css.map */

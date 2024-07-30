@@ -1,17 +1,12 @@
 <section>
-    <h1 class="form__title">Список користувачів</h1>
-    <form method="GET" action="/product-list"></form>
-    <div class="form">
-        <div class="product-list">
-            {{#with data}}
-            <ul>
-                {{#each products}}
-                <li>
-                    {{> product-card}}
-                </li>
-                {{/each}}
-            </ul>
-            {{/with}}
+    <h1 class="form__title">Список товарів</h1>
+    <form method="GET" action="/product-list">
+
+        <div class="product__list">
+            {{#each list}}
+            {{> product-card}}
+            {{/each}}
         </div>
-    </div>
+    </form>
+
 </section>

@@ -1,6 +1,5 @@
 @use '../../lib/service.scss' as s;
 
-
 section {
     padding: s.space(3);
 }
@@ -11,12 +10,15 @@ section {
     padding: s.space(4);
     gap: s.space(8);
     background-color: rgb(247, 245, 245);
-    width: 700px;
+    width: 800px;
     border-radius: 10px;
+    
+
+
 
 
     &__title {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: bold;
         padding: s.space(4);  
         color: #242EFF; 
@@ -26,69 +28,82 @@ section {
         font-size: 18px;
         font-weight: bold;
         padding: s.space(2); 
+        
     }
-} 
-
-.form {
-    display: flex;
-    flex-direction: column;
-    padding: s.space(4);
-    gap: s.space(8);
-
-    
 
     &__content {
-        display: grid;
+        display: flex;
         gap: s.space(6);
-
-        box-shadow: inset;
+        flex-direction: column;
     }
     
     &__field2 {
         display: flex;
         flex-direction: row;
-        
+        gap: s.space(2);
+    }
 
+    &__field2__all {
+        display: flex;
+        flex-direction: column;
+        gap: s.space(2);
+        width: 334px;
     }
 
     &__field {
         display: flex;
-
         flex-direction:column;
-
-        flex-direction: column;
-
         gap: s.space(2);
     }
 
     &__label {
-
         font-size: 13px;
         padding-left: s.space(2);
         color: gray;
-
-        font-size: 14px;
-
     }
 
     &__input {
         border: 1px solid s.color('light');
         padding: s.space(2);
-
         border-radius: 10px;
 
+    }
+    &__button__all{
+        display: flex;
+        gap: s.space(2);
     }
 
     &__button{
         border: 1px solid s.color('light');
         padding: s.space(2);
-        border-radius: 10px;
+        border-radius: 7px;
         background-color: #242EFF;
         color: white;
         width: 100%;
     }
-}
 
+    &__button__success {
+        border: 1px solid s.color('light');
+        padding: s.space(2);
+        border-radius: 7px;
+        background-color: #242EFF;
+        color: white;
+        width: 100%;
+    }
+
+    &__button__delete {
+        display: flex;
+        justify-content: center;
+        border: 1px solid s.color('light');
+        padding: s.space(2);
+        border-radius: 7px;
+        background-color: red;
+        color: white;
+        width: 100%;
+        text-decoration: none;
+    }
+
+}
 .alert {
     padding: s.space(3);
     
@@ -124,81 +139,78 @@ section {
         font-size: 13px;
         color: gray;
         width: 250px;
-
     }
-
-    &__button {
-        border: 1px solid s.color('light');
-        padding: s.space(2);
-        border-radius: 20px;
-    }
-
+    
 }
 
 
     
-    
- 
+
 .product__list{
     display: flex;
     flex-direction: row;
-    padding: s.space(4);
-    background-color: rgb(247, 245, 245);
-    border-radius: 10px;
     gap: 12px;
-    max-width: 250px;
-    max-height: 150px;
+    
+}
 
-    .product__card {
-        display: flex;
-        flex-direction: column;
-        gap: s.space(3);
+.product__card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: s.space(3);
+    padding: s.space(4);
+    border-radius: 10px;
+    background-color: rgb(247, 245, 245);
         
     
 
     
-        .product__card__name {
+    .product__card__name {
         font-size: 18px;
         font-weight: bold;
-        }
+    }
 
-        .product__card__description {
+    .product__card__description {
         font-size: 15px;
-        }
+    }
 
-        .product__card__id {
+    .product__card__id {
         font-size: 13px;
         color: gray;
+    }
+
+    .price__edit {
+        display: flex;
+        justify-content: space-between;
+
+
+        .product__card__price {
+            font-size: 16px;
+            font-weight: bold;
+            width: fit-content;
         }
-
-        .price__edit {
-            display: flex;
-            justify-content: space-between;
-
-
-            .product__card__price {
-                font-size: 16px;
-                font-weight: bold;
-                width: fit-content;
-            }
            
             
-            .product__card__edit {
+        .product__card__edit {
             text-decoration: none;
             width: fit-content;
-            }
-        
         }
-
         
     }
 
-
-
+        
 }
- 
+
+
+
+
+
+
 
  
- 
- 
+
+    
+
+
 

@@ -22,13 +22,6 @@ section {
   font-weight: bold;
   padding: 8px;
 }
-
-.form {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  gap: 32px;
-}
 .form__content {
   display: grid;
   gap: 24px;
@@ -41,14 +34,12 @@ section {
 .form__field {
   display: flex;
   flex-direction: column;
-  flex-direction: column;
   gap: 8px;
 }
 .form__label {
   font-size: 13px;
   padding-left: 8px;
   color: gray;
-  font-size: 14px;
 }
 .form__input {
   border: 1px solid #ddd;
@@ -61,22 +52,33 @@ section {
   border-radius: 10px;
   background-color: #242EFF;
   color: white;
-  width: 100%;
 }
 
 .alert {
   padding: 12px;
 }
 .alert__form {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 16px;
   background-color: rgb(247, 245, 245);
-  width: 700px;
   border-radius: 10px;
+  width: 700px;
+}
+.alert__form__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .alert__form__title {
   font-size: 16px;
   font-weight: bold;
+}
+.alert__form__info {
+  font-size: 13px;
+  color: gray;
+  width: 250px;
 }
 .alert__form__button {
   display: flex;
@@ -89,56 +91,6 @@ section {
   width: 250px;
   justify-self: end;
   text-decoration: none;
-}
-.alert__form__info {
-  font-size: 13px;
-  color: gray;
-  width: 250px;
-}
-.alert__button {
-  border: 1px solid #ddd;
-  padding: 8px;
-  border-radius: 20px;
-}
-
-.product__list {
-  display: flex;
-  flex-direction: row;
-  padding: 16px;
-  background-color: rgb(247, 245, 245);
-  border-radius: 10px;
-  gap: 12px;
-  max-width: 250px;
-  max-height: 150px;
-}
-.product__list .product__card {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.product__list .product__card .product__card__name {
-  font-size: 18px;
-  font-weight: bold;
-}
-.product__list .product__card .product__card__description {
-  font-size: 15px;
-}
-.product__list .product__card .product__card__id {
-  font-size: 13px;
-  color: gray;
-}
-.product__list .product__card .price__edit {
-  display: flex;
-  justify-content: space-between;
-}
-.product__list .product__card .price__edit .product__card__price {
-  font-size: 16px;
-  font-weight: bold;
-  width: fit-content;
-}
-.product__list .product__card .price__edit .product__card__edit {
-  text-decoration: none;
-  width: fit-content;
 }
 
 /*# sourceMappingURL=style.css.map */
