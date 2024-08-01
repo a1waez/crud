@@ -150,4 +150,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
+} 
+
+.purchase-create__button {
+    background-color: s.color(main);
+    color: s.color(superlight);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }

@@ -5,7 +5,7 @@
 
 <main class="main">
   {{#with data}}
-  <form method="POST" action="/purchase-edit?id={{id}}" class="form-card">
+  <div class="form-card">
     {{> heading title="Інформація про замовлення"}}
 
     <div class="purchase-info">
@@ -71,9 +71,10 @@
       </div>
     </div>
 
-    {{>button text="Змінити дані"}}
+    <a href="/purchase-edit?id={{id}}" class="purchase-create__button">Змінити дані
+    </a>
 
-  </form>
+  </div>
   {{/with}}
 </main>
 

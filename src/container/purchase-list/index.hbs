@@ -4,19 +4,21 @@
 }}
 
 <main class="main">
+
   {{#with data}}
   <form method="POST" action="/purchase-info" class="form-card">
     {{> heading title="Мої замовлення"}}
 
-
+    {{#each list}}
     {{> list}}
 
     {{>divider}}
-
+    {{/each}}
 
   </form>
   {{/with}}
 </main>
+
 
 {{!
 Цей код містить лише те, що буде виводитись в

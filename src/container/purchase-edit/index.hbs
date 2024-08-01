@@ -17,14 +17,24 @@
     {{>divider}}
 
     <div class="purchase-info__field2">
+      <div class="field">
+        <label for="{{firstname}}" value="{{firstname}}" class="field__label">Ім'я:</label>
+        <input type="text" value="{{firstname}}" name="{{firstname}}" class="field__input">
+      </div>
+      <div class="field">
+        <label for="{{lastname}}" value="{{lastname}}" class="field__label">Прізвище:</label>
+        <input type="text" value="{{lastname}}" name="{{firstname}}" class="field__input">
+      </div>
+      <div class="field">
+        <label for="{{phone}}" value="{{phone}}" class="field__label">Телефон:</label>
+        <input type="text" value="{{phone}}" name="{{phone}}" class="field__input">
+      </div>
+      <div class="field">
+        <label for="{{email}}" value="{{firstnemailame}}" class="field__label">Єлектронна пошта:</label>
+        <input type="text" value="{{email}}" name="{{email}}" class="field__input">
+      </div>
 
-      {{> field label="Ім'я:" value="{{firstname}}" name="firstname"}}
 
-      {{> field label="Прізвище:" value="{{lastname}}" name="lastname"}}
-
-      {{> field label="Телефон:" value="{{phone}}" name="phone" }}
-
-      {{> field label="Єлектронна пошта:" value="{{email}}" name="email"}}
     </div>
 
     {{>button text="Змінити дані"}}

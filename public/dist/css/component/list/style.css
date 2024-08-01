@@ -1,21 +1,40 @@
 .list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: flex-start;
   padding: 20px;
+  gap: 20px;
 }
 
 .list-id {
   display: flex;
-  align-self: center;
+  flex-direction: column;
   font-size: 16px;
   color: grey;
 }
 
-.list-info {
+.list-info__title {
   display: flex;
   flex-direction: column;
   color: grey;
+}
+
+.list-info {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.list-info__product1 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.list-info__product {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

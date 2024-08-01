@@ -1,6 +1,18 @@
 <div class="list">
-    <span class="list-id">ID:{{id}}</span>
-    <span class="list-info">Товари {{name}}</span>
-    <span class="list-info">Сума замовлення {{price}}</span>
-    <span class="list-info">Нараховані бонуси {{bonus}}</span>
+    <div class="list-info__product1">
+        <p class="list-info__title">ID:</p>
+        <span class="list-info">{{id}}</span>
+    </div>
+    <div class="list-info__product">
+        <p class="list-info__title">Товари</p>
+        <span class="list-info">{{product.title}}</span>
+    </div>
+    <div class="list-info__product">
+        <p class="list-info__title">Сума замовлення</p>
+        <span class="list-info">{{product.price}} ₴</span>
+    </div>
+    <div class="list-info__product">
+        <p class="list-info__title">Нараховані бонуси</p>
+        <span class="list-info">{{bonus}} ₴</span>
+    </div>
 </div>
