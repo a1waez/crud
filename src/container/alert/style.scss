@@ -1,0 +1,49 @@
+@use '../../lib/service.scss' as s;
+
+.alert {
+    display: flex;
+    justify-content: center;
+    padding: s.space(3);
+    
+    &__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: s.space(4);
+        background-color: s.color(light);
+        border-radius: 10px;
+        width: 700px;
+    
+    }
+
+    &__form__text {
+        display: flex;
+        flex-direction: column; 
+        gap: s.space(2);
+    }
+
+    
+    &__form__title {
+        font-size: 16px;
+        font-weight: bold; 
+    }
+        
+    &__form__info {
+        font-size: 13px;
+        color: s.color(gray);
+        width: 250px;
+    }
+        
+    &__form__button {
+        display: flex;
+        justify-content: center;
+        border: 1px solid s.color(light);
+        padding: s.space(2);
+        border-radius: 10px;
+        background-color: s.color(main);
+        color: s.color(light);
+        width: 250px;
+        justify-self: end;
+        text-decoration: none;
+    }
+}
