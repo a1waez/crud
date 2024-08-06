@@ -225,7 +225,7 @@ router.post('/spotify-create', function (req, res) {
 
 router.post('/spotify-playlist', function (req, res) {
   // res.render генерує нам HTML сторінку
-  const id = Number(req.query.id)
+  const id = Number(req.body.id)
 
   const playlist = Playlist.getById(id)
 
@@ -296,7 +296,7 @@ router.get('/spotify-playlist-add', function (req, res) {
   // res.render генерує нам HTML сторінку
   const playlistId = Number(req.query.playlistId)
 
-  const playlist = Track.getList(playlistId)
+  const playlist = Playlist.getById(playlistId)
 
   // ↙️ cюди вводимо назву файлу з сontainer
   res.render('spotify-playlist-add', {
@@ -316,9 +316,9 @@ router.get('/spotify-playlist-add', function (req, res) {
 
 router.get('/spotify-track-add', function (req, res) {
   // res.render генерує нам HTML сторінку
-  const playlist = Number(req.query.playlistId)
+  const playlistId = Number(req.query.playlistId)
   // const trackId = Number(req.query.trackId)
-
+  const playlist = Playlist.getById(playlistId)
   // ↙️ cюди вводимо назву файлу з сontainer
   res.render('spotify-playlist-add', {
     // вказуємо назву папки контейнера, в якій знаходяться наші стилі
