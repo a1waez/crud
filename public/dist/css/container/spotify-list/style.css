@@ -13,12 +13,13 @@ a:hover {
   padding: 24px 8px;
   height: 100%;
   color: #ddd;
+  height: 1500px;
   background-color: #121212;
 }
 
 .main__content {
   width: 100%;
-  max-width: 600px;
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -46,7 +47,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
+  gap: 24px;
 }
 .track__name {
   font-size: 24px;
@@ -80,6 +81,34 @@ a:hover {
 .playlist__amount {
   font-size: 16px;
   color: #BDBDBD;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.title__image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image {
+  display: flex;
+  gap: 32px;
+}
+
+.playlist__info {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.playlist__text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

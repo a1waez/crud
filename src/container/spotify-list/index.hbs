@@ -1,0 +1,69 @@
+<main class="main">
+    {{#with data}}
+    <div class="main__content">
+        <div class="title__image">
+            <h1 class="title">Моя бібліотека</h1>
+            <div class="image">
+                <form method="POST" action="/spotify-search" class="form">
+                    <button>
+                        <img src="/svg/spotify-search.svg">
+                    </button>
+                </form>
+                <form method="GET" action="/spotify-choose" class="form">
+                    <button>
+                        <img src="/svg/create_button.svg">
+                    </button>
+                </form>
+            </div>
+        </div>
+
+
+        <ul class="playlist__info">
+            <li>
+                <img src="https://picsum.photos/345/345">
+                <div class="playlist__text">
+                    <strong>Пісні що сподобались</strong>
+                    <span>50 пісень</span>
+
+                </div>
+            </li>
+            <li>
+                <img src="https://picsum.photos/345/345">
+                <div class="playlist__text">
+                    <strong>Пісні що сподобались</strong>
+                    <span>50 пісень</span>
+
+                </div>
+            </li>
+            <li>
+                <img src="https://picsum.photos/345/345">
+                <div class="playlist__text">
+                    <strong>Пісні що сподобались</strong>
+                    <span>50 пісень</span>
+
+                </div>
+            </li>
+        </ul>
+
+
+        {{!-- <ul class="track__list">
+            {{#each tracks}}
+            <li class="track">
+                <img src="{{image}}" height="100px" alt="{{name}}">
+                <div class="track__content">
+                    <strong class="track__name">{{name}}</strong>
+                    <em class="track__author">{{author}}</em>
+                </div>
+                <form method="POST" action="/spotify-track-add" class="form">
+                    <input name="trackId" value="{{id}}" hidden>
+                    <input name="playlistId" value="{{playlistId}}" type="img" hidden>
+                    <button>
+                        <img src="/svg/add_button.svg">
+                    </button>
+                </form>
+            </li>
+            {{/each}}
+        </ul> --}}
+    </div>
+    {{/with}}
+</main>
