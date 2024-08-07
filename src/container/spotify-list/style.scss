@@ -1,6 +1,9 @@
 @use '../../lib/service.scss' as s;
 @use '../../lib/spotify.scss' as spotify;
 
+.main__content{
+    gap: s.space(7);
+}
 
 .title {
     font-size: 30px;
@@ -21,11 +24,16 @@
     display: flex;
     gap: s.space(7);
     flex-wrap: wrap;
+    justify-content: center; 
+    background-color: rgba(53, 49, 49, 0.534);
+    border-radius: 20px; 
+    padding: s.space(7);
 }
 
 .playlist__text {
     display: flex;
     flex-direction: column;
     padding-top: 10px;
-    gap: 10px;
+    gap: 10px; 
 }
+

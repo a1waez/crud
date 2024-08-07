@@ -83,6 +83,10 @@ a:hover {
   color: #BDBDBD;
 }
 
+.main__content {
+  gap: 28px;
+}
+
 .title {
   font-size: 30px;
 }
@@ -102,6 +106,10 @@ a:hover {
   display: flex;
   gap: 28px;
   flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(53, 49, 49, 0.534);
+  border-radius: 20px;
+  padding: 28px;
 }
 
 .playlist__text {

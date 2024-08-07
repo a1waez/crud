@@ -94,14 +94,6 @@ class Playlist {
   static getById = (id) =>
     this.#list.find((playlist) => playlist.id === id)
 
-  // static getById(id) {
-  //   return (
-  //     Playlist.#list.find(
-  //       (playlist) => playlist.id === id,
-  //     ) || null
-  //   )
-  // }
-
   deleteTrackById(trackId) {
     this.tracks = this.tracks.filter(
       (track) => track.id !== trackId,
@@ -112,7 +104,7 @@ class Playlist {
     return this.#list.filter((playlist) =>
       playlist.name
         .toLowerCase()
-        .includes(name.toLowerCase),
+        .includes(name.toLowerCase()),
     )
   }
 }
@@ -134,7 +126,9 @@ router.get('/', function (req, res) {
     // вказуємо назву папки контейнера, в якій знаходяться наші стилі
     style: 'spotify-list',
 
-    data: {},
+    data: {
+      playlists: Playlist.getList(),
+    },
   })
   // ↑↑ сюди вводимо JSON дані
 })
@@ -146,13 +140,16 @@ router.get('/', function (req, res) {
 // ↙️ тут вводимо шлях (PATH) до сторінки
 router.get('/spotify-choose', function (req, res) {
   // res.render генерує нам HTML сторінку
+  const isMix = !!req.query.isMix
+
+  console.log(isMix)
 
   // ↙️ cюди вводимо назву файлу з сontainer
   res.render('spotify-choose', {
     // вказуємо назву папки контейнера, в якій знаходяться наші стилі
     style: 'spotify-choose',
 
-    data: {},
+    data: { isMix },
   })
   // ↑↑ сюди вводимо JSON дані
 })
@@ -320,9 +317,9 @@ router.get('/spotify-track-add', function (req, res) {
   // const trackId = Number(req.query.trackId)
   const playlist = Playlist.getById(playlistId)
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('spotify-playlist-add', {
+  res.render('spotify-playlist', {
     // вказуємо назву папки контейнера, в якій знаходяться наші стилі
-    style: 'spotify-playlist-add',
+    style: 'spotify-playlist',
 
     data: {
       playlistId: playlist.id,
@@ -347,9 +344,9 @@ router.post('/spotify-track-add', function (req, res) {
   playlist.tracks.push(track)
 
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('spotify-playlist-add', {
+  res.render('spotify-playlist', {
     // вказуємо назву папки контейнера, в якій знаходяться наші стилі
-    style: 'spotify-playlist-add',
+    style: 'spotify-playlist',
 
     data: {
       playlistId: playlist.id,
@@ -384,7 +381,6 @@ router.get('/spotify-search', function (req, res) {
 router.post('/spotify-search', function (req, res) {
   // res.render генерує нам HTML сторінку
   const value = req.body.value || ''
-
   const list = Playlist.findListByValue(value)
 
   console.log(value)
